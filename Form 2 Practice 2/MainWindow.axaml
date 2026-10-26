@@ -1,0 +1,98 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Form2Practicing2.MainWindow"
+        Title="Form2Practicing2">
+    <StackPanel Background="#f4c4eb">
+        <TextBlock Text="Shopping Cart with Discounts" FontWeight="Bold"
+                   TextAlignment="Center"
+                   FontSize="24"
+                   Margin="0 10 0 0 "></TextBlock>
+        
+        <StackPanel Background="Beige" Width="200" Margin="10"
+                    HorizontalAlignment="Left"
+                    >            
+        <CheckBox
+            Name="LaptopCheckBox"
+            Margin="30,20,0,0"
+            Content="Laptop 3,000 SAR"></CheckBox>
+        <CheckBox 
+            Name="MouseCheckBox"
+            Margin="30,20,0,0"
+            Content = "Mouse 80 SAR"></CheckBox>
+        <CheckBox 
+            Name="KeyboardCheckBox"
+            Margin="30,20,0,0"
+            Content="Keyboard 150 SAR"></CheckBox>
+        </StackPanel>
+        <GroupBox  Name="RadioGroupBox" 
+                   Header="Discount Status ?"
+                   HorizontalAlignment="Left" 
+                   Margin="10"
+                   BorderThickness="2"
+        >
+            <StackPanel>
+            <RadioButton 
+                GroupName="Discount Status"
+                Name="DiscountRadioButton"
+                Margin="30,20,0,0"
+                Content="Student discount: 10%"></RadioButton>
+        <RadioButton  GroupName="Discount Status"
+                      Name="NoDiscountRadioButton"
+                      Margin="30,5,0,0"
+                      Content="No discount">
+            
+        </RadioButton>
+            </StackPanel>
+        </GroupBox>
+       
+            <TextBlock Name="ResultTextBlock"
+                       Foreground= "Black"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Text="Select item/s and discount status"
+                       TextAlignment="Center"
+                   
+            ></TextBlock>
+            
+
+    
+    <Grid ColumnDefinitions="*,*" ColumnSpacing="20" HorizontalAlignment="Center">
+        <Button Name="TotalButtonClick"
+                Click="TotalButtonClick_OnClick"
+                Grid.Column="0" Margin="0 20 0 0" 
+                HorizontalAlignment="Center" 
+                Content="Calculate Total"
+                Background="Black"
+                Foreground="White"
+                FontWeight="Black"
+        >
+            <Button.Styles>
+                <Style Selector="Button:pointerover/template/ContentPresenter#PART_ContentPresenter">
+                    <Setter Property="Background" Value="Black"></Setter>
+                    <Setter Property="Foreground" Value="White"></Setter>
+                </Style>
+                
+        </Button.Styles>
+            </Button>
+        <Button  Name="ClearButtonClick"
+                 Click="ClearButtonClick_OnClick"
+                 Grid.Column="1" Margin="0 20 0 0" 
+                 HorizontalAlignment="Center" 
+                 Content = "Clear"
+                 FontWeight="Bold"
+                 Background="White"
+                 Foreground="Black"
+        >
+            <Button.Styles>
+                <Style Selector="Button:pointerover/template/ContentPresenter#PART_ContentPresenter">
+                    <Setter Property="Background" Value="White"></Setter>
+                </Style>
+                
+            </Button.Styles></Button>
+        
+    </Grid>
+    </StackPanel>
+</Window>
