@@ -1,0 +1,101 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Form2Practicing.MainWindow"
+        Title="Form2Practicing">
+
+    <StackPanel Background="Wheat" Orientation="Vertical" Spacing="5"
+    >  <Panel Height="40"/> 
+        <RadioButton Content="Credit Card"
+                     Name="CreditButton"
+                     Margin="50,0,0,0"
+                     FontWeight="Bold"
+                    >
+        </RadioButton>
+        <RadioButton Content="Cash" 
+                     Name="CashButton"  
+                     Margin="50,0,0,0"
+                     FontWeight="Bold">
+            
+        </RadioButton>
+        <RadioButton Content="Bank Transfer"  
+                     Name="BankButton"  
+                     Margin="50,0,0,0"
+                     FontWeight="Bold">
+            
+        </RadioButton>
+   
+        <TextBlock Name="ResultBlock"
+                   Text=""
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Margin="0,10,0,0"
+                   FontWeight="Bold"
+                   FontSize="15">
+        </TextBlock>
+        
+        <Grid  ColumnDefinitions="*,*,*"
+               HorizontalAlignment="Center"
+               Margin="10"
+             >
+            <Button    Grid.Column="0" 
+                      Click="PayButton_Click"
+                      Content="Pay"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Center"
+                      Margin="5"
+                      FontSize="20"
+                      FontWeight="Bold"
+                      CornerRadius="10"
+                      Background="Brown"
+                      Foreground="Wheat">
+                <Button.Styles><Style
+                                   Selector="Button:pointerover/template/ContentPresenter">
+                    <Setter Property="Background" Value="Brown"></Setter>
+                    <Setter Property="Foreground" Value="Wheat"></Setter>
+
+                </Style></Button.Styles>
+            </Button>
+            <Button  Grid.Column="1" 
+                     Click="WelcomeButton_Click"
+                     Content = "Click Me"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center"
+                     Margin="5"
+                     FontSize="20"
+                     FontWeight="Bold"
+                     CornerRadius="10"
+                     Background="Brown"
+                     Foreground="Wheat"
+            >
+            <Button.Styles><Style
+                               Selector="Button:pointerover/template/ContentPresenter">
+                <Setter Property="Background" Value="Brown"></Setter>
+                <Setter Property="Foreground" Value="Wheat"></Setter>
+
+            </Style></Button.Styles>
+        </Button>
+            <Button  Grid.Column="2"  
+                     Click="ClearButton_Click"
+                     Content = "Clear"
+                     VerticalAlignment="Center"
+                     Margin="5"
+                     FontSize="20"
+                     FontWeight="Bold"
+                     CornerRadius="10"
+                     Background="Brown"
+                     Foreground="Wheat"
+            >
+                <Button.Styles><Style
+                                   Selector="Button:pointerover/template/ContentPresenter">
+                    <Setter Property="Background" Value="Brown"></Setter>
+                    <Setter Property="Foreground" Value="Wheat"></Setter>
+
+                </Style></Button.Styles>
+            </Button>
+            
+        </Grid>
+    </StackPanel>
+</Window>
