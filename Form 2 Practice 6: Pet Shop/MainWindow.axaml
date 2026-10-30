@@ -1,0 +1,83 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1100" d:DesignHeight="650"
+        x:Class="Form2Practice6.MainWindow"
+        Title="Pet Shop Management System">
+    <Window.Styles>
+        <Style Selector="Button">
+            <Setter Property="Height" Value="100"></Setter>
+            <Setter Property="Width" Value="120"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="BorderThickness" Value="1.5"></Setter>
+            <Setter Property="CornerRadius" Value="6"></Setter>
+            <Setter Property="FontFamily" Value=""></Setter>
+         
+
+        </Style>
+        <Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+            <!--To ensure that the background stays the same for each button with its own colors-->
+            <Setter Property="Background" Value="{TemplateBinding Background}"/>
+            <Setter Property="BorderBrush" Value="{TemplateBinding BorderBrush}"/>
+            
+        </Style>
+        
+       
+    </Window.Styles>
+    <StackPanel Background="#FAF9F4">
+        <HeaderedContentControl Background="Pink" HorizontalContentAlignment="Center">
+            <HeaderedContentControl.Header>
+                <TextBlock Text="Welcome to Pet Shop"
+                           FontSize="38"
+                           FontWeight="Bold"/>
+            </HeaderedContentControl.Header>
+
+            <TextBlock Text="Manage your pet shop easily"
+                       FontSize="22"/>
+        </HeaderedContentControl>
+        
+        <Grid ColumnDefinitions="*,*,*,*,*,*" 
+              Margin="0 50 0 0 "
+             HorizontalAlignment="Center"
+             VerticalAlignment="Stretch"
+             ColumnSpacing="20">
+        <Button
+            Grid.Column="0"
+            Content="Register Pet"
+            Background="#E0F2E7"
+            Foreground="#245344"
+            BorderBrush="#70C99A"
+            ></Button>
+        <Button 
+            Grid.Column="1"
+            Content="Pet Catalog"
+            Background="#E1EFFB"
+            Foreground="#28547B"
+            BorderBrush="#78B9EF"
+            ></Button>
+            <Button 
+                Grid.Column="2"
+                Content="Sell Pet"
+                Background="#FFF0D9"
+                Foreground="#98600C"
+                BorderBrush="#FFB84D"></Button>
+            <Button 
+                Grid.Column="3"
+                Content="About"
+                Background="#F0E5FA"
+                Foreground="#67438A"
+                BorderBrush="#C49AE8"></Button>
+            <Button 
+                Grid.Column="4"
+                Content="Exit"
+                Background="#FCE4E5"
+                Foreground="#923F46"
+                BorderBrush="#F28B91"
+                ></Button>
+        </Grid>
+    </StackPanel>
+</Window>
+
